@@ -14,6 +14,7 @@ O Front end está localizado em /dist/ldxps, e seu funcionamento depende da exec
 
 Objeto JSON de vendedor
 {
+
   "CDVEND",
   "DSNOME",
   "CDTAB",
@@ -21,7 +22,7 @@ Objeto JSON de vendedor
 }
 
 @GET
-http://localhost:8080/ldxps-restful-api/api/vendedor/ \n
+http://localhost:8080/ldxps-restful-api/api/vendedor/
 Retorna uma lista de vendedores com atributos como descrito na especificação de requisito
 
 @GET
