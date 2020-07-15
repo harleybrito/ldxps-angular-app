@@ -1,0 +1,44 @@
+<br>
+<div class="container">
+    <form [formGroup]="form">
+        <h5>Cadastro de cliente</h5>
+        <div class="form-group">
+            <label for="DSNOME">Nome do cliente</label>
+            <input type="text" [ngClass]="applyError('DSNOME')" formControlName="DSNOME" id="DSNOME" class="form-control">
+            <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="CDCL">Código de cliente</label>
+                <input type="text" [ngClass]="applyError('CDCL')" formControlName="CDCL" id="CDCL" class="form-control">
+                <div class="invalid-feedback">Campo obrigatório</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="DSLIM">Limite de crédito</label>
+                <input type="number" [ngClass]="applyError('DSLIM')" formControlName="DSLIM" id="DSLIM" class="form-control">
+                <div class="invalid-feedback">Campo obrigatório</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="IDTIPO">Tipo de cliente</label>
+                <select id="IDTIPO" [ngClass]="applyError('IDTIPO')" class="form-control" formControlName="IDTIPO">
+                    <option>PF</option>
+                    <option>PJ</option>
+                </select>
+                <div class="invalid-feedback">Campo obrigatório</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="CDVEND">Vendedor</label>
+                <select id="CDVEND" [ngClass]="applyError('CDVEND')" class="form-control" formControlName="CDVEND">
+                    <option *ngFor="let vendedor of vendedores" [value]="vendedor['CDVEND']">{{vendedor.DSNOME}}</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-success mr-3" (click)="criarCliente()">Confirmar</button>
+        <button class="btn btn-danger" (click)="remove()" *ngIf="edicao">Excluir</button>
+    </form>
+    <br>
+    <h5 class="text-success" *ngIf="criado">Cliente criado</h5>
+    <h5 class="text-danger" *ngIf="criado === false">Erro na criação</h5>
+</div>

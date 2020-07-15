@@ -1,0 +1,39 @@
+<br>
+<div class="container">
+    <form [formGroup]="form">
+        <h5>Cadastro de vendedor</h5>
+        <div class="form-group">
+            <label for="DSNOME">Nome do vendedor</label>
+            <input type="text" [ngClass]="applyError('DSNOME')" formControlName="DSNOME" id="DSNOME" class="form-control">
+            <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="CDVEND">Código do vendedor</label>
+                <input type="text" [ngClass]="applyError('CDVEND')" formControlName="CDVEND" id="CDVEND" class="form-control">
+                <div class="invalid-feedback">Campo obrigatório</div>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="CDTAB">Cód. Tabela Preço</label>
+                <input type="number" [ngClass]="applyError('CDTAB')" formControlName="CDTAB" id="CDTAB" class="form-control">
+                <div class="invalid-feedback">Campo obrigatório</div>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="DTNASC">Data Nascimento</label>
+                <input type="text" placeholder="AAAA-MM-DD" [ngClass]="applyError('DTNASC')" formControlName="DTNASC" id="DTNASC" class="form-control">
+                <div class="invalid-feedback">Campo obrigatório</div>
+            </div>
+        </div>
+        <div class="form-row">
+        </div>
+        <button class="btn btn-success mr-3" (click)="criarVendedor()">Confirmar</button>
+        <button class="btn btn-danger" *ngIf="edicao" (click)="remove()">Excluir</button>
+    </form>
+    <br>
+    <h5 class="text-success" *ngIf="criado">Vendedor criado</h5>
+    <h5 class="text-danger" *ngIf="criado === false">Erro na criação</h5>
+</div>
+
+<div class="container">
+    <app-clientes></app-clientes>
+</div>

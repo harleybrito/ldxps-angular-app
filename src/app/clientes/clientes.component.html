@@ -1,0 +1,18 @@
+<p>Lista de clientes</p>
+<div class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let cliente of clientes">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p>Nome: {{cliente.DSNOME}}</p>
+                <p>Tipo: {{cliente.IDTIPO}}</p>
+                <p>Limite de crédito: {{cliente.DSLIM}}</p>
+                
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <button class="btn btn-primary mr-3" (click)="clienteClicado(cliente)">Editar</button>
+            </div>
+        </div>
+    </a>
+</div>
+<button class="btn btn-info btn-block" routerLink="/cliente">Criar Cliente</button>
+<button class="btn btn-success btn-block" (click)="listarAll()">Todos os clientes</button>

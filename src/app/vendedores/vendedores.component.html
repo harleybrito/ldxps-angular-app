@@ -1,0 +1,13 @@
+<div class="list-group">
+    <a class="list-group-item list-group-item-action" (click)="listarClientes(vendedor)" *ngFor="let vendedor of vendedores">
+        <div class="row align-items-center" >
+            <div class="col-md-6">
+                {{vendedor.DSNOME}}
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+                <button class="btn btn-primary mr-3" (click)="vendedorClicado(vendedor)">Editar</button>
+            </div>
+        </div>
+    </a>
+</div>
+<button class="btn btn-info btn-block" routerLink="/vendedor">Criar Vendedor</button>
