@@ -16,60 +16,103 @@ Objeto JSON de vendedor
 {
 
   "CDVEND",
+  
   "DSNOME",
+  
   "CDTAB",
+  
   "DTNASC"
+  
 }
 
 @GET
+
 http://localhost:8080/ldxps-restful-api/api/vendedor/
+
 Retorna uma lista de vendedores com atributos como descrito na especificação de requisito
 
+
 @GET
+
 http://localhost:8080/ldxps-restful-api/api/vendedor/{CDVEND}
+
 Retorna um vendedor
 
+
 @POST
+
 http://localhost:8080/ldxps-restful-api/api/vendedor/
+
 Recebe um objeto JSON de vendedor
+
 
 @PUT
+
 http://localhost:8080/ldxps-restful-api/api/vendedor/{CDVEND}
+
 Recebe um objeto JSON de vendedor
 
+
 @DELETE
+
 http://localhost:8080/ldxps-restful-api/api/vendedor/{CDVEND}
+
+
 
 ### Recurso cliente
 
 Objeto JSON de cliente
 {
+
   "CDCL",
+  
   "DSNOME",
+  
   "IDTIPO",
+  
   "CDVEND",
+  
   "DSLIM"
+  
 }
 
+
 @GET
+
 http://localhost:8080/ldxps-restful-api/api/cliente/
+
 Retorna uma lista de clientes com atributos como descrito na especificação de requisito
 
+
 @GET
+
 http://localhost:8080/ldxps-restful-api/api/cliente/byVendedor/{CDVEND}
+
 Retorna uma lista de clientes que estejam relacionados com o código CDVEND
 
+
 @GET
+
 http://localhost:8080/ldxps-restful-api/api/cliente/{CDCL}
+
 Retorna um cliente
 
+
 @POST
+
 http://localhost:8080/ldxps-restful-api/api/cliente/
+
 Recebe um objeto JSON de cliente
+
 
 @PUT
+
 http://localhost:8080/ldxps-restful-api/api/vendedor/{CDCL}
+
 Recebe um objeto JSON de cliente
 
+
 @DELETE
+
 http://localhost:8080/ldxps-restful-api/api/vendedor/{CDCL}
+
