@@ -10,7 +10,7 @@ Este repositório contém:
 
 O Front end está localizado em /dist/ldxps, e seu funcionamento depende da execução de uma API de acesso aos dados (/dist/ldxps-database.sql). A API é um projeto de aplicação WEB JAVA, especificado no formato RESTful Jersey, localizado em /ldxps-restful-api. O projeto deve ser executado no Netbeans IDE v8.0, JDK v8, no endereço http://localhost:8080. No caso de já existir uma API, esta deve ser executada com entry point http://localhost:8080/ldxps-restful-api/api/', com requisições de resposta retornando objetos JSON, cujos recursos serão especificados abaixo:
 
-###Recurso vendedor
+### Recurso vendedor
 
 Objeto JSON de vendedor
 {
@@ -39,7 +39,7 @@ Recebe um objeto JSON de vendedor
 @DELETE
 http://localhost:8080/ldxps-restful-api/api/vendedor/{CDVEND}
 
-###Recurso cliente
+### Recurso cliente
 
 Objeto JSON de cliente
 {
