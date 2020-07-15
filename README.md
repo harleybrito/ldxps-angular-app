@@ -21,7 +21,7 @@ Objeto JSON de vendedor
 }
 
 @GET
-http://localhost:8080/ldxps-restful-api/api/vendedor/
+http://localhost:8080/ldxps-restful-api/api/vendedor/ \n
 Retorna uma lista de vendedores com atributos como descrito na especificação de requisito
 
 @GET
